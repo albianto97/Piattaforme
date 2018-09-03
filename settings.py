@@ -1,8 +1,8 @@
 # Your Bot token (get it from BotFather)
-token = '694050542:AAHeatUTS24sA3RowYyh9QtOAmK5WT07CYs'
+token = '669230638:AAEtX1mL_lIqbB-uOzjWLWq6OX25lfx8Cng'
 
 # Message send when user 'start' the bot
-start_msg = "Benvenuto su @MuseiMarcheBot\n"
+start_msg = "Benvenuto su @IN LOMBARDIA\n"
 
 # File with 'started' clients
 client_file = "clients_id.txt"
