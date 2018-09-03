@@ -10,7 +10,7 @@ import requests
 import sys
 import telepot
 
-# State for user
+#for user
 utente = {}
 
 #definizione della funzione on_chat_message
@@ -130,11 +130,8 @@ def on_chat_message(msg):
                 		url='https://www.dati.lombardia.it/resource/7n8z-rsk5.json?denominazione_struttura='+str(msg['text']))
                 	json_data = r.json()
 			#estraggo i dati JSON
-			#for i in json_data[0:len(json_data[0])]:
-			#	conteggio+=1
 			count=0
 			presente=0
-			#for o in range(0,conteggio):
 			for i in json_data[0:len(json_data[0])]:
 				nome_comune = json_data [count]["nome_comune"]
 				denominazione_struttura = json_data[count]["denominazione_struttura"]		
@@ -158,8 +155,7 @@ def on_chat_message(msg):
 			else: 	
 				bot.sendMessage(chat_id, "NON DISPONIBILE LA MAPPA PER QUESTO HOTEL \ncomune: {}.\ndenominazione: {}.	\nindirizzo:{}.\n". format(nome_comune,denominazione_struttura,indirizzo))
 
-		#count=None
-					
+	
 # Main
 print("Avvio Albergo_bot!")
 
