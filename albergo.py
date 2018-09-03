@@ -50,7 +50,7 @@ def on_chat_message(msg):
                 msg ="Inserisci il nome dell'albergo richiesto:"
 		bot.sendMessage(chat_id, msg,reply_markup=ReplyKeyboardRemove(remove_keyboard=True))
                 utente[chat_id] = 2
-		#bot.sendMessage(chat_id,msg['text']) se tolgo commento da errore, ma non è la stessa cosa di metterlo sotto???
+	
 		
 
 	
@@ -124,7 +124,7 @@ def on_chat_message(msg):
         elif utente[chat_id] == 2:
 
     	    if content_type == 'text':
-		bot.sendMessage(chat_id,msg['text']) #se messo sopra da errore perche??
+		bot.sendMessage(chat_id,msg['text']) 
 		try:	
 			r = requests.get(
                 		url='https://www.dati.lombardia.it/resource/7n8z-rsk5.json?denominazione_struttura='+str(msg['text']))
@@ -133,27 +133,27 @@ def on_chat_message(msg):
 			#for i in json_data[0:len(json_data[0])]:
 			#	conteggio+=1
 			count=0
-			#o=0
+			presente=0
 			#for o in range(0,conteggio):
 			for i in json_data[0:len(json_data[0])]:
 				nome_comune = json_data [count]["nome_comune"]
-				denominazione_struttura = json_data[count]["denominazione_struttura"]	
-					#sbaglio = False
+				denominazione_struttura = json_data[count]["denominazione_struttura"]		
 				indirizzo=json_data[count]["indirizzo"]
+				presente=presente+1
 				latitude = json_data [count]["location"]["latitude"] 
 				longitude= json_data[count]["location"]["longitude"]
 				bot.sendLocation(chat_id,latitude,longitude)	
 				bot.sendMessage(chat_id, "comune: {}.\ndenominazione: {}.\nindirizzo: {}.\n".
 						format(nome_comune,denominazione_struttura,indirizzo))	
                                 count=count+1
-					#sbaglio = True
+					
 					
 				
 			bot.sendMessage(chat_id, "/digita il nome di un hotel che hai visto, altrimenti /cerca o /cercaGPS per effettuare 								un altra ricerca",reply_markup=ReplyKeyboardRemove(remove_keyboard=True))
 			utente[chat_id] = 0
 		
 	    	except:
-			if (count==0):
+			if (count==0 and presente == 0):
 				bot.sendMessage(chat_id, "Errore API, non esiste l'albergo ricercato ", 								reply_markup=ReplyKeyboardRemove(remove_keyboard=True))
 			else: 	
 				bot.sendMessage(chat_id, "NON DISPONIBILE LA MAPPA PER QUESTO HOTEL \ncomune: {}.\ndenominazione: {}.	\nindirizzo:{}.\n". format(nome_comune,denominazione_struttura,indirizzo))
