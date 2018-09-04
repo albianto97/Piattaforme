@@ -31,17 +31,24 @@ Per poter utilizzare questo API, mi appoggio alle API di "dati.lombardia", le qu
 
 <h2>Bot di telegram </h2>
 Per avviare il bot, occorre scaricare l'applicazione di messaggistica chiamata "Telegram". Successivamente e' necessario effettuare la ricerca del bot denominato "LombardiaHMBot":
+<a><img src='Immagini/start.png' height='500' alt='ScreenShot'/></a>
 Dopo aver cliccato su start apparira' un messaggio di benvenuto e verra' chiesto di digitare "/help" per visualizzare i comandi del bot.
+<a><img src='Immagini/help.png' height='500' alt='ScreenShot'/></a>
 
 A questo punto e' possibile digitare il modo preferito per effettuare la ricerca, ossia:
 * Digitando la città.
 * Il nome dell'albergo.
 * Inviando la posizione di dove ci si trova in quel momento.
 
-Se si e' scelto di effettuare una ricerca digitando una città verranno mostrate le principali città  della lombardia altrimenti è sempre possibile digitarla nella chat. Se si e' scelto di effettuarla tramite posizione, si dovra' inviarla.
+Se si e' scelto di effettuare una ricerca digitando una città verranno mostrate le principali città  della lombardia altrimenti è sempre possibile digitarla nella chat. 
+<a><img src='Immagini/cerca.png' height='500' alt='ScreenShot'/></a>
+Se si e' scelto di effettuarla tramite posizione, si dovra' inviarla.
+<a><img src='Immagini/posizione.png' height='500' alt='ScreenShot'/></a>
 In entrambi i casi verranno mostrati gli hotel che indicheranno il comune, la denominazione e l'indirizzo. 
+<a><img src='Immagini/Bergamo.png' height='500' alt='ScreenShot'/></a>
 
 Se si e' scelto di effettuare una ricerca digitando la denominazione di un hotel, il risultato oltre alle informazioni precedenti mostrerà anche la posizione geografia se quest'ultima è presente nell'API.
+<a><img src='Immagini/BUIZZALUIGI.png' height='500' alt='ScreenShot'/></a>
 
 
 
