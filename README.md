@@ -43,7 +43,7 @@ A questo punto e' possibile digitare il modo preferito per effettuare la ricerca
 Se si e' scelto di effettuare una ricerca digitando una città verranno mostrate le principali città  della lombardia altrimenti è sempre possibile digitarla nella chat. 
 <a><img src='Immagini/cerca.png' height='500' alt='ScreenShot'/></a>
 Se si e' scelto di effettuarla tramite posizione, si dovra' inviarla.
-<a><img src='Immagini/posizione.png' height='500' alt='ScreenShot'/></a>
+<a><img src='Immagini/Posizione.png' height='500' alt='ScreenShot'/></a>
 In entrambi i casi verranno mostrati gli hotel che indicheranno il comune, la denominazione e l'indirizzo. 
 <a><img src='Immagini/Bergamo.png' height='500' alt='ScreenShot'/></a>
 
